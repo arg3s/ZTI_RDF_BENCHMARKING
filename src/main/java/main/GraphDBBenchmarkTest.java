@@ -26,7 +26,7 @@ class GraphDBBenchmarkTest {
 		this.connection = connection;
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void runTest() throws Exception {
 		// Utworzenie polaczenia z repo do bazy GraphDB
 
 		RepositoryConnection connection = EmbeddedGraphDB.openConnectionToTemporaryRepository("owl2-rl-optimized");
@@ -96,7 +96,6 @@ class GraphDBBenchmarkTest {
 			long now = System.currentTimeMillis();
 			double estimatedTime = (now - start);
 			System.out.println("Insert took: " + estimatedTime + " milliseconds.");
-
 		}
 
 	}
