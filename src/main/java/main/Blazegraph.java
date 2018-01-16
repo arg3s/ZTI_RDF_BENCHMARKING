@@ -4,6 +4,10 @@ package main;
  * Created by Hala on 2018-01-16.
  */
 import java.util.Properties;
+
+import com.bigdata.journal.Options;
+import com.bigdata.rdf.sail.BigdataSail;
+import com.bigdata.rdf.sail.BigdataSailRepository;
 import org.eclipse.rdf4j.RDF4J;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import static main.QueryConstants.prepareAndEvaluate;
@@ -23,10 +27,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
-import com.bigdata.journal.Options;
-import com.bigdata.rdf.sail.BigdataSail;
-import com.bigdata.rdf.sail.BigdataSailRepository;
-
+import org.eclipse.rdf4j.query.TupleQueryResult;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.RepositoryException;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFParseException;
 //import org.openrdf.repository.Repository;
 
 public class Blazegraph {
@@ -40,7 +45,7 @@ public class Blazegraph {
         props.put(Options.FILE, "/tmp/blazegraph/test.jnl"); // journal file location
 
         final BigdataSail sail = new BigdataSail(); // instantiate a sail
-        final Repository repo = new BigdataSailRepository(sail); // create a Sesame repository
+        final Repository repo = (Repository) new BigdataSailRepository(sail); // create a Sesame repository
         repo.initialize();
         RepositoryConnection con = repo.getConnection();
 
