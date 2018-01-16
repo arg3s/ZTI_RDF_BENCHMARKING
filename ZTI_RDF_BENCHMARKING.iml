@@ -11,6 +11,28 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-model:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-util:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-repository-sail:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-repository-api:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-sail-api:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-http-client:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-http-protocol:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-rio-ntriples:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-queryresultio-api:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-queryparser-api:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-queryalgebra-model:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-rio-api:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-rio-trig:4.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.openrdf.sesame:sesame-rio-datatypes:4.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.openrdf.sesame:sesame-rio-languages:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-rio-turtle:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-queryalgebra-evaluation:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-repository-sparql:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-queryparser-sparql:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-queryresultio-sparqlxml:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-query:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.blazegraph:bigdata-runtime:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.ontotext.graphdb:graphdb-free-runtime:8.4.0" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-healthchecks:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.iq80.snappy:snappy:0.4" level="project" />
