@@ -34,8 +34,8 @@ public class RDF4JDBBenchmarkTest {
 
         try {
             con.clear();
-            con.begin();
             stopwatch.start();
+            con.begin();
             con.add(RDF4JDBBenchmarkTest.class.getResourceAsStream("/data/sp2b.n3"), "urn:base", RDFFormat.N3);
             stopwatch.stopForInsert();
 
