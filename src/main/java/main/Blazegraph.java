@@ -1,13 +1,6 @@
 package main;
 
-/**
- * Created by Hala on 2018-01-16.
- */
 import java.util.Properties;
-
-import com.bigdata.journal.Options;
-import com.bigdata.rdf.sail.BigdataSail;
-import com.bigdata.rdf.sail.BigdataSailRepository;
 import org.eclipse.rdf4j.RDF4J;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import static main.QueryConstants.prepareAndEvaluate;
@@ -27,34 +20,31 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
-import org.eclipse.rdf4j.query.TupleQueryResult;
-import org.eclipse.rdf4j.repository.RepositoryConnection;
-import org.eclipse.rdf4j.repository.RepositoryException;
-import org.eclipse.rdf4j.rio.RDFFormat;
-import org.eclipse.rdf4j.rio.RDFParseException;
-//import org.openrdf.repository.Repository;
+
+import com.bigdata.journal.Options;
+import com.bigdata.rdf.sail.BigdataSail;
+import com.bigdata.rdf.sail.BigdataSailRepository;
 
 public class Blazegraph {
     private static Stopwatch stopwatch = new Stopwatch();
-
-    private RepositoryConnection con;
 
     public static void main(String[] args) throws Exception {
         final Properties props = new Properties();
         props.put(Options.BUFFER_MODE, "DiskRW"); // persistent file system located journal
         props.put(Options.FILE, "/tmp/blazegraph/test.jnl"); // journal file location
 
-        final BigdataSail sail = new BigdataSail(); // instantiate a sail
-        final Repository repo = (Repository) new BigdataSailRepository(sail); // create a Sesame repository
+        final BigdataSail sail = new BigdataSail(props); // instantiate a sail
+        final Repository repo  = (Repository) new BigdataSailRepository(sail); // create a Sesame repository
+
         repo.initialize();
         RepositoryConnection con = repo.getConnection();
 
         try {
             con.clear();
-            con.begin();
             stopwatch.start();
+            con.begin();
             con.add(Blazegraph.class.getResourceAsStream("/data/sp2b.n3"), "urn:base", RDFFormat.N3);
-            stopwatch.stopForInitialize();
+            stopwatch.stopForInsert();
 
             System.out.println("# RUNNING QUERIES");
             IntStream.range(0, 8).forEach(i -> {
@@ -69,29 +59,5 @@ public class Blazegraph {
             con.close();
         }
 
-    }
-
-    public static final class Stopwatch {
-
-        private Long start;
-
-        private Map<Integer, Double> timesMap = new HashMap<>();
-
-        public void start() {
-            start = System.currentTimeMillis();
-        }
-
-        public void stop(int queryId) {
-            long now = System.currentTimeMillis();
-            double estimatedTime = (now - start);
-            timesMap.put(queryId, estimatedTime);
-            System.out.println("Query nr: " + queryId + " took: " + estimatedTime);
-        }
-
-        public void stopForInitialize() {
-            long now = System.currentTimeMillis();
-            double estimatedTime = (now - start);
-            System.out.println("Initialize took: " + estimatedTime + " milliseconds.");
-        }
     }
 }

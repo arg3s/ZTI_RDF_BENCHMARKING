@@ -11,6 +11,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.8.0-beta0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.6.4" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
     <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-model:4.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-util:4.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.openrdf.sesame:sesame-repository-sail:4.1.2" level="project" />
@@ -134,7 +137,44 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.lucene:lucene-sandbox:5.2.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.lucene:lucene-spatial:5.2.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.lucene:lucene-misc:5.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.8.0-beta0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.8.0-beta0" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/high-scale-lib-1.0.jar/high-scale-lib-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/high-scale-lib-1.0.jar/high-scale-lib-1.0.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/fastutil-5.0.3-heritrix-subset-1.0.jar/fastutil-5.0.3-heritrix-subset-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/jar_files/fastutil-8.1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/icu4j.jar/icu4j.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
